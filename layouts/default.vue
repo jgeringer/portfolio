@@ -17,7 +17,7 @@
 
     <footer class="footer">
       <div class="content has-text-centered">
-        <ul>
+        <ul class="list--plain">
           <li>
             <a href="#">Work</a>
           </li>

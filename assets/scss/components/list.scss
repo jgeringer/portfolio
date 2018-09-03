@@ -1,0 +1,12 @@
+@import 'core/variables.scss';
+
+.list{
+    &--plain{
+        list-style-type: none;
+        margin: 0;
+        &> li{
+            display: inline-block;
+            padding: .75em;
+        }
+    }
+}
