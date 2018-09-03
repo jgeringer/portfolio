@@ -1,0 +1,26 @@
+@import 'core/variables.scss';
+
+.hero {
+    &.is-primary{
+        background-color: $colorAwesomeBrightPurple
+    }
+}
+
+.HeroImage{
+    height: 40vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+.fade-enter-active {
+    transition: opacity 3s ease-in-out;
+  }
+  
+  .fade-enter-to {
+    opacity: 1;
+  }
+  
+  .fade-enter {
+    opacity: 0;
+  }
+  

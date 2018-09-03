@@ -1,0 +1,9 @@
+@import 'core/variables.scss';
+
+@import 'components/grid.scss';
+@import 'components/hero.scss';
+@import 'components/footer.scss';
+
+body {
+    background: $colorAwesomePurple !important;
+}
