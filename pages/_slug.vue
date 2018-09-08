@@ -27,7 +27,9 @@
             <h2>
               {{ callout.fields.title }}
             </h2>
-            <img :src="callout.fields.image.fields.file.url" />
+
+            <component :is="callout.fields.device" :image="callout.fields.image.fields.file.url"></component>
+
             <div v-html="$md.render(callout.fields.description)"></div>
           </section>
 
@@ -41,8 +43,12 @@
 
 <script>
 import client from '~/plugins/contentful';
+import mobile from '~/components/DeviceMobile';
+import tablet from '~/components/DeviceTablet';
+import desktop from '~/components/DeviceDesktop';
 
 export default {
+  name: 'slug',
   data() {
     return{
       loaded: false,
@@ -79,5 +85,10 @@ export default {
       title: this.post.fields.title,
     };
   },
+  components: {
+    mobile,
+    tablet,
+    desktop
+  }
 };
 </script>
