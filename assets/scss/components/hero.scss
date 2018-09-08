@@ -4,6 +4,15 @@
     &.is-primary{
         background-color: $colorAwesomeBrightPurple
     }
+    &.is-secondary{
+        position: relative;
+        a{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: 5;
+        }
+    }
 }
 
 .HeroImage{

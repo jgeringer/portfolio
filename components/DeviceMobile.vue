@@ -1,6 +1,8 @@
 <template>
     <div class="Mobile">
-        <img class="Skin" src="/content/device-mobile.svg" alt="Mobile device">
+        <svg class="svg svg--mobile" viewBox="0 0 261.6 530.1">
+            <use xlink:href="#mobile"></use>
+        </svg>
         <img class="ActualImage" :src="image" />
     </div>
 </template>
@@ -15,14 +17,21 @@ export default {
 
 <style lang="scss" scoped>
     .Mobile{
-        width: 300px;
         position: relative;
-    }
-    .Skin{
+        display: flex;
+        flex-direction: column;
         width: 100%;
-        position: absolute;
+        max-width: 360px;
+        overflow: hidden;
+        z-index: 5;
+    }
+    svg {
+        z-index: 5;
     }
     .ActualImage{
-        padding: 17% 11px 12px 12px;
+        position: absolute;
+        top: 8.2%;
+        left: 4.5%;
+        width: 91.8%;
     }
 </style>

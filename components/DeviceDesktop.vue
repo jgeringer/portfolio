@@ -1,5 +1,8 @@
 <template>
     <div class="Desktop">
+        <svg class="svg svg--desktop" viewBox="0 0 1092.82 42.47">
+            <use xlink:href="#desktop"></use>
+        </svg>
         <img class="ActualImage" :src="image" />
     </div>
 </template>
@@ -15,32 +18,13 @@ export default {
 <style lang="scss" scoped>
     .Desktop{
         position: relative;
-        width: 300px;
-        padding-top: 30px;
-        &:before{
-                content: '';
-                position: relative;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 16px;
-                background-image: url(/content/device-desktop.svg);
-                background-repeat: no-repeat;
-                display: block;
-                /* background-color: red; */
-                /* float: left; */
-                /* display: block; */
-                background-position: left top;
-                background-size: 100% 21PX;
-        }
-        background-repeat: no-repeat;
-        background-position: top center;
-    }
-    .Skin{
-        width: 300px;
-        position: absolute;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 800px;
+        overflow: hidden;
     }
     .ActualImage{
-        //padding: 11px 0px 0 0px;
+        
     }
 </style>

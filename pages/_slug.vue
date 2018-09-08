@@ -1,13 +1,20 @@
 <template>
-  <section class="section">
+  <section class="">
 
-    <a :href="post.fields.url" v-text="post.fields.heroButtonText" target="_blank" class="Button"></a>
-    <transition name="fade">
-      <img class="HeroImage" v-on:load="onLoaded" v-show="loaded" v-if="post.fields.heroImage" :src="post.fields.heroImage.fields.file.url">
-    </transition>
-    <div class="content" v-html="$md.render(post.fields.description)"></div>
-
+    <div class="hero is-secondary">
+      <transition name="fade">
+        <img class="HeroImage" v-on:load="onLoaded" v-show="loaded" v-if="post.fields.heroImage" :src="post.fields.heroImage.fields.file.url">
+      </transition>
+    </div>
+    
     <div class="container">
+      <div class="columns">
+        <div class="column is-offset-2 is-8">
+          <div class="content" v-html="$md.render(post.fields.description)"></div>
+          <a :href="post.fields.url" v-text="post.fields.heroButtonText" target="_blank" class="Button"></a>
+        </div>
+      </div>
+
       <div class="columns">
         <div class="column is-offset-2 is-8">
           
