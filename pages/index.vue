@@ -3,6 +3,7 @@
     <div class="container">
       <div class="columns">
         <div class="column is-offset-2 is-8">
+          <h2>Work</h2>
           <hr />
           <h2
             class="title is-4"
@@ -12,8 +13,6 @@
               {{ post.fields.title }}
             </nuxt-link>
           </h2>
-          <h3>Test H3</h3>
-          <h4>Test H4</h4>
         </div>
       </div>
     </div>

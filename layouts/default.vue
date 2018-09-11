@@ -32,18 +32,12 @@
 
     <footer class="footer">
       <div class="content has-text-centered">
-        <ul class="list--plain">
+        <ul class="list--plain is-marginless">
           <li>
-            <a href="#">Work</a>
+            <a href="/">Work</a>
           </li>
           <li>
-            <a href="#">About</a>
-          </li>
-          <li>
-            <a href="#">Contact</a>
-          </li>
-          <li>
-            <a href="#">Resume</a>
+            <nuxt-link to="/resume">Resume</nuxt-link>
           </li>
         </ul>
         <p><a href="mailto:joegeringer@gmail.com">joegeringer@gmail.com</a></p>
