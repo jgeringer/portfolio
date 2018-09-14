@@ -37,6 +37,9 @@
             <a href="/">Work</a>
           </li>
           <li>
+            <nuxt-link to="/about">About</nuxt-link>
+          </li>
+          <li>
             <nuxt-link to="/resume">Resume</nuxt-link>
           </li>
         </ul>
