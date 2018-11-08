@@ -33,3 +33,12 @@
     opacity: 0;
   }
   
+
+  .main-nav{
+      a{
+          transition: color 2s;
+      }
+    a.nuxt-link-active{
+      color: red;
+    }
+  }

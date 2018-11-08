@@ -5,14 +5,10 @@
         <div class="column is-offset-2 is-8">
           <h2>Work</h2>
           <hr />
-          <h2
-            class="title is-4"
-            v-for="(post, index) in posts"
-              :key="index">
-            <nuxt-link :to="post.fields.slug">
-              {{ post.fields.title }}
-            </nuxt-link>
-          </h2>
+
+          <navigation :posts="posts"></navigation>
+
+          
         </div>
       </div>
     </div>
@@ -21,6 +17,7 @@
 
 <script>
 import client from '~/plugins/contentful';
+import navigation from '~/components/Navigation';
 
 export default {
   async asyncData({ params }) {
@@ -38,6 +35,9 @@ export default {
   head: {
     title: 'Latest Posts',
   },
+  components: {
+    navigation
+  }
 };
 </script>
 

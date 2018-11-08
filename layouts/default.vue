@@ -23,10 +23,20 @@
           </h1>
           <h2 class="subtitle">
             Frontend Web Developer
+            <nuxt-link to="/">HOME</nuxt-link>
           </h2>
         </div>
       </div>
     </section>
+
+    <section class="columns">
+      <ol class="main-nav column">
+        <li><nuxt-link to="/seura">Seura</nuxt-link></li>
+        <li><nuxt-link to="/frigidaire">Frigidaire</nuxt-link></li>
+      </ol>
+    </section>
+
+    <!-- <navigation></navigation> -->
 
     <nuxt/>
 
@@ -46,13 +56,24 @@
         <p><a href="mailto:joegeringer@gmail.com">joegeringer@gmail.com</a></p>
       </div>
     </footer>
-    
+
   </div>
 </template>
 
-<style>
-html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
-}
+<script>
+  // import navigation from '~/components/Navigation';
+
+  export default {
+    name: 'default',
+    // components: {
+    //   navigation
+    // }
+  }
+</script>
+
+<style lang="scss" scoped>
+  html {
+    font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+      Roboto, 'Helvetica Neue', Arial, sans-serif;
+  }
 </style>
