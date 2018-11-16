@@ -5,9 +5,9 @@
         <div class="column is-offset-2 is-8">
           <h2>Work</h2>
           <hr />
-
+<!--
           <navigation :posts="posts"></navigation>
-
+-->
           
         </div>
       </div>
@@ -17,7 +17,7 @@
 
 <script>
 import client from '~/plugins/contentful';
-import navigation from '~/components/Navigation';
+// import navigation from '~/components/Navigation';
 
 export default {
   async asyncData({ params }) {
@@ -36,7 +36,7 @@ export default {
     title: 'Latest Posts',
   },
   components: {
-    navigation
+    //navigation
   }
 };
 </script>

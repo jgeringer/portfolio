@@ -49,6 +49,9 @@ module.exports = {
       }
     }
   },
+  router: {
+    middleware: 'pages'
+  },
   plugins: ['~/plugins/contentful'],
   modules: [
     ['nuxt-sass-resources-loader', [
@@ -73,7 +76,6 @@ module.exports = {
     },
     minify: {
       collapseWhitespace: false
-    }
-  
+    }  
   }
 }

@@ -28,16 +28,8 @@
         </div>
       </div>
     </section>
-
-    <section class="columns">
-      <ol class="main-nav column">
-        <li><nuxt-link to="/seura">Seura</nuxt-link></li>
-        <li><nuxt-link to="/frigidaire">Frigidaire</nuxt-link></li>
-      </ol>
-    </section>
-
-    <!-- <navigation></navigation> -->
-
+    
+    <navigation></navigation>
     <nuxt/>
 
     <footer class="footer">
@@ -61,13 +53,21 @@
 </template>
 
 <script>
-  // import navigation from '~/components/Navigation';
+  import navigation from '~/components/Navigation';
 
   export default {
     name: 'default',
-    // components: {
-    //   navigation
-    // }
+    data(){
+      return {
+        hero: ''
+      }
+    },
+    mounted() {
+      
+    },
+    components: {
+      navigation
+    }
   }
 </script>
 
