@@ -54,12 +54,18 @@ module.exports = {
   },
   plugins: ['~/plugins/contentful'],
   modules: [
-    ['nuxt-sass-resources-loader', [
-      'assets/scss/core/variables.scss'
-  ]],
+    [
+      '@nuxtjs/style-resources'
+    ],
     '@nuxtjs/dotenv',
     '@nuxtjs/markdownit'
   ],
+  styleResources: {
+    // your settings here
+    sass: ['assets/scss/core/variables.scss'], // alternative: scss
+    less: [],
+    stylus: []
+   },
   markdownit: {
     injected: true
   },
