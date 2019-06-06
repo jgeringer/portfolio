@@ -83,5 +83,9 @@ module.exports = {
     minify: {
       collapseWhitespace: false
     }  
+  },
+  env: {
+    CTF_SPACE_ID: process.env.CTF_SPACE_ID,
+    CTF_ACCESS_TOKEN: process.env.CTF_ACCESS_TOKEN
   }
 }
