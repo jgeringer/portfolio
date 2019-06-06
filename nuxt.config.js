@@ -1,6 +1,5 @@
 require('dotenv').config()
 const client = require('./plugins/contentful')
-const contentful = require('contentful')
 
 module.exports = {
   /*
@@ -48,9 +47,9 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-      config.node = {
-        fs: 'empty'
-      }      
+    },
+    html: {
+      minify: true
     }
   },
   router: {
@@ -75,10 +74,6 @@ module.exports = {
   },
   generate: {
     routes () {
-      const client = contentful.createClient({
-        space:  process.env.CTF_SPACE_ID,
-        accessToken: process.env.CTF_CD_ACCESS_TOKEN
-      })
       return client.getEntries({ content_type: 'post' }).then(entries => {
         return entries.items.map(entry => {
           return {
@@ -87,13 +82,6 @@ module.exports = {
           }
         })
       })
-    },
-    minify: {
-      collapseWhitespace: false
-    }  
-  },
-  env: {
-    CTF_SPACE_ID: process.env.CTF_SPACE_ID,
-    CTF_ACCESS_TOKEN: process.env.CTF_ACCESS_TOKEN
+    }
   }
 }
